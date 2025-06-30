@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión - Jagua Visión 360</title>
+  <link rel="stylesheet" href="estilos.css"> <!-- Si tienes un archivo CSS externo -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    select, input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0052cc;
+    }
+
+    #mensaje {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <label for="tipo_usuario">Tipo de Usuario:</label>
+      <select id="tipo_usuario" name="tipo_usuario" required>
+        <option value="">Seleccionar...</option>
+        <option value="natural">Persona Natural</option>
+        <option value="juridica">Persona Jurídica</option>
+      </select>
+
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+
+      <button type="submit">Entrar</button>
+      <p id="mensaje"></p>
+    </form>
+  </div>
+
+  <!-- Enlace al JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
