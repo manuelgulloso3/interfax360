@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Servicios en Tarjetas</title>
-  <link rel="stylesheet" href="servicio.css" />
-  <!-- Fuente opcional -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -13,6 +11,35 @@
       background-color: #f8f9fa;
       margin: 0;
       padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .buscar-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .buscar-container input {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    .volver-btn {
+      padding: 8px 15px;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     h2 {
@@ -51,6 +78,7 @@
       width: 64px;
       height: 64px;
       margin-bottom: 10px;
+      filter: grayscale(100%);
     }
 
     .tarjeta h3 {
@@ -67,13 +95,17 @@
   </style>
 </head>
 <body>
+  <header>
+    <button class="volver-btn" onclick="window.location.href='index.html'">Volver a la Página Principal</button>
+    <div class="buscar-container">
+      <input type="text" placeholder="Buscar servicios..." />
+    </div>
+  </header>
 
-  
   <h2>Servicios Disponibles</h2>
   <p class="intro">Explora nuestras categorías de servicios en formato de tarjetas.</p>
 
   <div class="tarjetas-container">
-
     <div class="tarjeta">
       <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Comercio" />
       <h3>Comercio y Ventas al Detal</h3>
@@ -90,12 +122,12 @@
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/2683/2683526.png" alt="Educación" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2984/2984194.png" alt="Educación" />
       <h3>Educación y Formación</h3>
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/860/860814.png" alt="Transporte" />
+      <img src="https://cdn-icons-png.flaticon.com/512/1907/1907109.png" alt="Transporte" />
       <h3>Transporte y Logística</h3>
     </div>
 
@@ -105,7 +137,7 @@
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077081.png" alt="Entretenimiento" />
+      <img src="https://cdn-icons-png.flaticon.com/512/845/845777.png" alt="Entretenimiento" />
       <h3>Entretenimiento y Cultura</h3>
     </div>
 
@@ -115,7 +147,7 @@
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Financieros" />
+      <img src="https://cdn-icons-png.flaticon.com/512/492/492649.png" alt="Financieros" />
       <h3>Servicios Financieros y Jurídicos</h3>
     </div>
 
@@ -125,12 +157,12 @@
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/2937/2937309.png" alt="Agroindustria" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3081/3081826.png" alt="Agroindustria" />
       <h3>Agroindustria y Productos Locales</h3>
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Construcción" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2940/2940685.png" alt="Construcción" />
       <h3>Construcción y Obra Civil</h3>
     </div>
 
@@ -145,15 +177,14 @@
     </div>
 
     <div class="tarjeta">
-      <img src="https://cdn-icons-png.flaticon.com/512/3063/3063828.png" alt="Energía" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3207/3207993.png" alt="Energía" />
       <h3>Energía y Servicios Públicos</h3>
     </div>
-
   </div>
 
   <footer>
     <p>&copy; 2025 Jagua Visión 360. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
+
