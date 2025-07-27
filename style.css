@@ -153,22 +153,17 @@ footer
 
 .contact-form label {
   font-weight: bold;
-  color: #f9d700;
+  color: #000000;
 }
 
 .contact-form input,
 .contact-form textarea {
-  background-color: #333;
+  background-color: #ffffff;
   color: #fff;
   border: 1px solid #555;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #f9d700;
-  box-shadow: 0 0 5px #f9d700;
-}
+
 
 /* Mejora responsive para botones del navbar en dispositivos pequeños */
 @media (max-width: 991px) {
