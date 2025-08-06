@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Comercio y Ventas al Detal - Perfiles</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 0 15px #007bff;
+  }
+  .photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #007bff;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  .service {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    min-height: 40px;
+  }
+  .stars {
+    font-size: 1.2em;
+    color: gold;
+  }
+  .star-empty {
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h2>Perfiles - Comercio y Ventas al Detal</h2>
+
+<div class="grid" id="cards-container"></div>
+
+<script>
+  // Perfiles con calificación de ejemplo (0 a 5)
+  const perfiles = [
+    { id: "c1", photo: "img/imagenesjagua360/imagenesjagua360/CATALOGO DE HERRAMIENTAS WSA/PERFIL MANUEL.jpg", name: "Manuel gulloso", service: " Asesor Comercial en Herramientas Eléctricas y a Combustión ", rating: 4 },
+    { id: "c2", photo: "https://randomuser.me/api/portraits/women/21.jpg", name: "Ana Gómez", service: "Tienda de ropa para niños", rating: 5 },
+    { id: "c3", photo: "https://randomuser.me/api/portraits/men/32.jpg", name: "Jorge Ramírez", service: "Productos de ferretería", rating: 3 },
+    { id: "c4", photo: "https://randomuser.me/api/portraits/women/44.jpg", name: "Laura Pérez", service: "Librería y papelería", rating: 2 },
+    { id: "c5", photo: "https://randomuser.me/api/portraits/men/54.jpg", name: "Luis Torres", service: "Venta de productos electrónicos", rating: 5 },
+    { id: "c6", photo: "https://randomuser.me/api/portraits/women/65.jpg", name: "María Castillo", service: "Tienda de calzado", rating: 4 },
+    { id: "c7", photo: "https://randomuser.me/api/portraits/men/72.jpg", name: "Pedro Sánchez", service: "Venta de productos agrícolas", rating: 3 },
+    { id: "c8", photo: "https://randomuser.me/api/portraits/women/83.jpg", name: "Sofía Rojas", service: "Boutique de moda femenina", rating: 5 },
+    { id: "c9", photo: "https://randomuser.me/api/portraits/men/94.jpg", name: "Ricardo Díaz", service: "Venta de productos de belleza", rating: 4 },
+    { id: "c10", photo: "https://randomuser.me/api/portraits/women/15.jpg", name: "Claudia Morales", service: "Tienda de juguetes", rating: 2 },
+    { id: "c11", photo: "https://randomuser.me/api/portraits/men/26.jpg", name: "Fernando Vargas", service: "Venta de artículos deportivos", rating: 4 },
+    { id: "c12", photo: "https://randomuser.me/api/portraits/women/37.jpg", name: "Gabriela Ruiz", service: "Tienda de accesorios y joyería", rating: 5 },
+    { id: "c13", photo: "https://randomuser.me/api/portraits/men/48.jpg", name: "Andrés Herrera", service: "Venta de artículos para mascotas", rating: 3 },
+    { id: "c14", photo: "https://randomuser.me/api/portraits/women/59.jpg", name: "Isabel Fernández", service: "Tienda de productos orgánicos", rating: 4 },
+    { id: "c15", photo: "https://randomuser.me/api/portraits/men/60.jpg", name: "Javier Cruz", service: "Venta de productos de limpieza", rating: 3 },
+    { id: "c16", photo: "https://randomuser.me/api/portraits/women/71.jpg", name: "Natalia Morales", service: "Tienda de electrodomésticos pequeños", rating: 5 },
+    { id: "c17", photo: "https://randomuser.me/api/portraits/men/82.jpg", name: "Santiago López", service: "Venta de artículos para el hogar", rating: 4 },
+    { id: "c18", photo: "https://randomuser.me/api/portraits/women/93.jpg", name: "Camila Ortega", service: "Tienda de productos tecnológicos", rating: 5 },
+    { id: "c19", photo: "https://randomuser.me/api/portraits/men/14.jpg", name: "Diego Herrera", service: "Venta de artículos escolares", rating: 3 },
+    { id: "c20", photo: "https://randomuser.me/api/portraits/women/25.jpg", name: "Valeria Jiménez", service: "Tienda de ropa deportiva", rating: 4 },
+    { id: "c21", photo: "https://randomuser.me/api/portraits/men/36.jpg", name: "Joaquín Navarro", service: "Venta de alimentos y bebidas", rating: 5 },
+    { id: "c22", photo: "https://randomuser.me/api/portraits/women/47.jpg", name: "Daniela Vargas", service: "Tienda de productos de belleza", rating: 4 },
+    { id: "c23", photo: "https://randomuser.me/api/portraits/men/58.jpg", name: "Alejandro Castillo", service: "Venta de herramientas y ferretería", rating: 3 },
+    { id: "c24", photo: "https://randomuser.me/api/portraits/women/69.jpg", name: "Lorena Ramírez", service: "Tienda de productos para bebés", rating: 5 },
+    { id: "c25", photo: "https://randomuser.me/api/portraits/men/70.jpg", name: "Miguel Salazar", service: "Venta de productos electrónicos", rating: 4 }
+  ];
+
+ const container = document.getElementById('cards-container');
+
+  perfiles.forEach(perfil => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    let starsHtml = '';
+    for (let i = 1; i <= 5; i++) {
+      starsHtml += i <= perfil.rating
+        ? '<span class="star">&#9733;</span>'
+        : '<span class="star star-empty">&#9733;</span>';
+    }
+
+    card.innerHTML = `
+      <img src="${perfil.photo}" alt="${perfil.name}" class="photo" />
+      <div class="name">${perfil.name}</div>
+      <div class="service">${perfil.service}</div>
+      <div class="stars">${starsHtml}</div>
+    `;
+
+    // ✅ Redirigir a perfil.html
+    card.onclick = () => {
+      window.location.href = `perfil.html?id=${perfil.id}`;
+    };
+
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
