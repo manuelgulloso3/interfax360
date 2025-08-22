@@ -6,49 +6,52 @@
   <title>Jagua Visión 360</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="text-center p-3 bg-dark text-white">
-    <h1>Jagua Visión 360</h1>
-    <p>"La solución integral para talentos y empresas."</p>
-    <div class="logo"><img src="img/imagenesjagua360/JAGUA VISION 360 copy 2.jpg" alt="Logo Jagua Visión 360" /></div>
-  </header>
 
-  <section class="bg-white py-2">
-    <form class="d-flex search-bar" role="search">
-      <input class="form-control me-2" type="search" placeholder="Buscar servicios o vacantes..." aria-label="Buscar" />
-      <button class="btn btn-outline-primary" type="submit">Buscar</button>
-    </form>
-  </section>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo, nombre y eslogan -->
+      <div class="d-flex align-items-center">
+        <img src="img/imagenesjagua360/JAGUA VISION 360 copy 2.jpg" alt="Logo Jagua Visión 360" style="height: 60px; border-radius: 30px;"/>
+        <div class="ms-3 text-white">
+          <h5 class="mb-0">Jagua Visión 360</h5>
+          <small class="text-muted">"La solución integral para talentos y empresas."</small>
+        </div>
+      </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons" aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#empresas">Empresas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mision">Misión y Visión</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-
-        <div class="user-actions d-flex flex-wrap justify-content-center gap-2 my-2">
-          <a class="btn custom-btn" href="iniciar-sesion.html">Iniciar Sesión</a>
-          <a class="btn custom-btn" href="registrarse.html">Registrarse</a>
-          <a class="btn custom-btn" href="servicios.html">Servicios</a>
-          <a class="btn custom-btn" href="vacantes.html">Vacantes</a>
+      <!-- Enlaces -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarButtons">
+        <div class="navbar-nav">
+          <a class="nav-link custom-btn mx-1" href="#empresas">Empresas</a>
+          <a class="nav-link custom-btn mx-1" href="#nosotros">Nosotros</a>
+          <a class="nav-link custom-btn mx-1" href="#mision">Misión y Visión</a>
+          <a class="nav-link custom-btn mx-1" href="#contacto">Contacto</a>
+          <a class="nav-link custom-btn mx-1" href="iniciar-sesion.html">Iniciar Sesión</a>
+          <a class="nav-link custom-btn mx-1" href="registrarse.html">Registrarse</a>
+          <a class="nav-link custom-btn mx-1" href="servicios.html">Servicios</a>
+          <a class="nav-link custom-btn mx-1" href="vacantes.html">Vacantes</a>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- Barra de búsqueda -->
+  <section class="bg-white py-2">
+    <form class="d-flex search-bar container" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar servicios o vacantes..." aria-label="Buscar" />
+      <button class="btn btn-outline-primary" type="submit">Buscar</button>
+    </form>
+  </section>
 
   <!-- Carrusel -->
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -72,9 +75,6 @@
         <img src="img/imagenesjagua360/soldadura.jpg" class="d-block w-100" alt="Mina" />
       </div>
     </div>
-    
-   
-
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Anterior</span>
