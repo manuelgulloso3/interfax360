@@ -17,7 +17,7 @@
       
       <!-- Logo, nombre y eslogan -->
       <div class="d-flex align-items-center">
-        <img src="img/imagenesjagua360/JAGUA VISION 360 copy 2.jpg" alt="Logo Jagua Visión 360" style="height: 60px; border-radius: 30px;"/>
+        <img src="img/imagenesjagua360/JAGUA VISION 360 copy 2.jpg" alt="Logo Jagua Visión 360" style="height: 100px; border-radius: 200px;"/>
         <div class="ms-3 text-white">
           <h5 class="mb-0">Jagua Visión 360</h5>
           <small class="text-muted">"La solución integral para talentos y empresas."</small>
@@ -46,13 +46,18 @@
   </nav>
 
   <!-- Barra de búsqueda -->
-  <section class="bg-white py-2">
-    <form class="d-flex search-bar container" role="search">
-      <input class="form-control me-2" type="search" placeholder="Buscar servicios o vacantes..." aria-label="Buscar" />
+ 
+  <section>
+    <form class="search-bar d-flex justify-content-center align-items-center" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Buscar servicios o vacantes..."
+        aria-label="Buscar"
+      />
       <button class="btn btn-outline-primary" type="submit">Buscar</button>
     </form>
   </section>
-
   <!-- Carrusel -->
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -114,29 +119,48 @@
     <p>Ser la plataforma líder en Colombia y reconocida a nivel internacional por conectar de manera efectiva a prestadores de servicios, empleadores y aspirantes.</p>
   </section>
 
-  <!-- Contacto -->
-  <section class="container" id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: contacto@jaguadeibirico.com</p>
-    <p>Teléfono: +57 311 7619625</p>
-    <p>Dirección: La Jagua de Ibirico, Cesar, Colombia</p>
+<section class="container" id="contacto">
+  <h2>Contacto</h2>
 
-    <form class="contact-form" action="https://formspree.io/f/mleygzzj" method="POST">
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" required />
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" name="email" required />
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-    </form>
-  </section>
+  <div class="contact-container">
+    
+    <!-- Formulario -->
+    <div class="contact-box">
+      <p><strong>Email:</strong> contacto@jaguadeibirico.com</p>
+      <p><strong>Teléfono:</strong> +57 311 7619625</p>
+      <p><strong>Dirección:</strong> La Jagua de Ibirico, Cesar, Colombia</p>
+
+      <form class="contact-form" action="https://formspree.io/f/mleygzzj" method="POST">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+      </form>
+    </div>
+
+    <!-- Mapa -->
+     <div class="contact-image">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.730755058334!2d-73.3331403!3d9.5598699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e603ce312edf15b%3A0xd320dc64a6652879!2sLa%20Jagua%20de%20Ibirico%2C%20Cesar!5e0!3m2!1ses!2sco!4v1665416821234!5m2!1ses!2sco"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
+
+
+
 
   <!-- Footer -->
   <footer class="text-center py-4 bg-dark text-white">
