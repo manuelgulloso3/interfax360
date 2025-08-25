@@ -7,6 +7,22 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Reducir tamaño del logo */
+.navbar img {
+  height: 60px !important; /* antes 100px */
+}
+
+/* Reducir tamaño del texto del título */
+.navbar h5 {
+  font-size: 1rem; /* más pequeño */
+  margin: 0;
+}
+
+/* Reducir tamaño del eslogan */
+.navbar small {
+  font-size: 0.7rem;
+  
+}
 
 /* Navbar - barra de navegación */
 .navbar {
