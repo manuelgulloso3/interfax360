@@ -1,9 +1,6 @@
 /* Estilos generales del cuerpo de la página */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #000000; /* Color de fondo oscuro */
-  color: #e0e0e0;            /* Color de texto claro */
+ 
   margin: 0;
   padding: 0;
 }
