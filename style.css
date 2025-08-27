@@ -6,27 +6,26 @@ body {
   color: #e0e0e0;            /* Color de texto claro */
   margin: 0;
   padding: 0;
-}
-/* Reducir tamaño del logo */
-.navbar img {
-  height: 60px !important; /* antes 100px */
-}
-
-/* Reducir tamaño del texto del título */
-.navbar h5 {
-  font-size: 0.7rem; /* más pequeño */
-  margin: 0;
+/* Ajustar logo */
+.navbar-brand img {
+    height: 40px;   /* reduce altura del logo */
+    width: auto;    /* mantiene proporción */
+    border-radius: 0; /* si quieres quitar borde circular */
+    margin-right: 8px; /* espacio entre logo y texto */
 }
 
-/* Reducir tamaño del eslogan */
-.navbar small {
-  font-size: 0.7rem;
-  
+/* Ajustar eslogan */
+.navbar-brand span {
+    font-size: 16px;   /* tamaño más pequeño del texto */
+    font-weight: bold; /* opcional */
 }
 
-.navbar {
-  padding-top: 5px;
-  padding-bottom: 5px;
+/* Alinear a la izquierda */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px; /* ajusta distancia del borde */
 }
 
 
@@ -58,24 +57,37 @@ body {
   border: none !important;
 }
 
-/* Ajuste de la barra para que flote con sombra ligera */
-.search-bar {
-  background: #fff; /* Mantén el input en blanco */
-  border-radius: 25px;
-  padding: 8px 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+/* Quitar espacio entre navbar y carrusel */
+body {
+  margin: 0;
+  padding: 0;
 }
-.search-bar input.form-control {
-  font-size: 0.85rem;
-  padding: 6px 8px;
-  border-radius: 4px;
+
+/* Ajustar carrusel pegado al menú */
+.carousel {
+  margin-top: 0;
+}
+
+/* Estilos del buscador sobre la imagen */
+.search-bar {
+  background: rgba(255, 255, 255, 0.2); /* transparente, sin caja blanca */
+  padding: 10px;
+  border-radius: 0px;
+  backdrop-filter: blur(6px); /* efecto vidrio elegante */
+}
+
+.search-bar input {
+  border: none;
+  border-radius: 0px 0 0 0px;
+  padding: 1px 15px;
+  outline: none;
 }
 
 .search-bar button {
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 0 00px 0px 0;
+  padding: 1px 15px;
 }
+
 
 /* Responsive: en móviles quitamos posición absoluta */
 @media (max-width: 768px) {
@@ -100,7 +112,7 @@ body {
 .carousel-item img {
   height: 600px; /* Altura del carrusel en desktop */
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0px;
   filter: brightness(90%);
 }
 
@@ -126,7 +138,7 @@ body {
 
 /* Contenido general */
 .container {
-  padding: 2rem 1rem;
+  padding: rem rem;
 }
 
 h2 {
@@ -227,4 +239,5 @@ footer {
     margin-top: 1.5rem; /* Separación arriba */
     height: 250px;      /* Altura más pequeña en móvil */
   }
+}
 }
