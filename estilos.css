@@ -35,10 +35,15 @@ header img {
   margin-left: 5px;
 }
 
-.carousel img {
-  max-height: 500px;
-  object-fit: cover;
+.carousel-item img {
+    width: 500%;
+    height: 5vh; /* ocupa toda la pantalla */
+    object-fit: cover; 
+    object-position: center top; /* centra el foco en la parte superior */
+    object-position: 15% 45%; 
+
 }
+
 
 .container {
   max-width: 1200px;
