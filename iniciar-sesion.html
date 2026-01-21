@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Iniciar Sesión - Jagua Visión 360</title>
-  <link rel="stylesheet" href="estilos.css"> <!-- Si tienes un archivo CSS externo -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -59,6 +58,16 @@
       margin-top: 15px;
       text-align: center;
     }
+
+    .volver-btn {
+      background-color: #ccc;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .volver-btn:hover {
+      background-color: #bbb;
+    }
   </style>
 </head>
 <body>
@@ -81,9 +90,13 @@
       <button type="submit">Entrar</button>
       <p id="mensaje"></p>
     </form>
+
+    <!-- Botón de Volver a la Página Principal -->
+    <a href="index.html" style="text-decoration: none;">
+      <button type="button" class="volver-btn">Volver a la Página Principal</button>
+    </a>
   </div>
 
-  <!-- Enlace al JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

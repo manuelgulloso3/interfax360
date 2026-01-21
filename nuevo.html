@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagua Visión 360</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="encabezado">
+  <div class="logo-nombre">
+   <h1>Jagua Visión 360</h1> 
+    <img src="img/imagenesjagua360/JAGUA VISION 360 copy.jpg" alt="Logo">
+  </div>
+
+ 
+
+  <!-- Lista solo visible al hacer clic -->
+  <ul>
+    
+</div>
+
+  <div class="container">
+    <!-- LOGIN -->
+    <div class="tarjetas-box">
+      <h2 class="titulo-login">Accede a tu perfil</h2>
+      <p class="intro">Ingresa tus credenciales para continuar.</p>
+      <div class="tarjetas-container login-wrapper">
+        
+        
+        <!-- Imagenes de al lado -->
+        
+<!-- Hexagonal grid superior -->
+  <div class="hex-grid">
+    
+    <div class="hex-grid">
+  <div class="hex-row">
+    <div class="hex"><img src="img/imagenesjagua360/enfermera 5.jpg" alt=""></div>
+  </div>
+  <div class="hex-row">
+    <div class="hex"><img src="img/imagenesjagua360/mecanica 5.jpg" alt=""></div>
+    <div class="hex"><img src="img/imagenesjagua360/distribucion de agua potable 3.jpg" alt=""></div>
+  </div>
+  <div class="hex-row">
+    <div class="hex"><img src="img/imagenesjagua360/mina.png" alt=""></div>
+    <div class="hex"><img src="img/imagenesjagua360/restaurante 2.jpg" alt=""></div>
+    <div class="hex"><img src="img/imagenesjagua360/musico.jpg" alt=""></div>
+  </div>
+  <div class="hex-row">
+    <div class="hex"><img src="img/imagenesjagua360/servicio de transporte 4.jpg" alt=""></div>
+    <div class="hex"><img src="img/imagenesjagua360/soldadura industrialxx.jpg" alt=""></div>
+  </div>
+  <div class="hex-row">
+    <div class="hex"><img src="img/imagenesjagua360/JAGUA VISION 360.jpg" alt=""></div>
+  </div>
+</div>
+  </div>
+
+
+
+
+        <!-- Tarjeta de login -->
+        <div class="login-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Perfil" />
+          <input type="text" id="cedula" placeholder="Ingresa tu cédula o NIT de empresa">
+          <div class="grid" id="patron-grid">
+            <div class="punto" data-numero="1"></div>
+            <div class="punto" data-numero="2"></div>
+            <div class="punto" data-numero="3"></div>
+            <div class="punto" data-numero="4"></div>
+            <div class="punto" data-numero="5"></div>
+            <div class="punto" data-numero="6"></div>
+            <div class="punto" data-numero="7"></div>
+            <div class="punto" data-numero="8"></div>
+            <div class="punto" data-numero="9"></div>
+          </div>
+          <p>Patrón: <span id="patron"></span></p>
+          <p id="mensaje"></p>
+          <div class="botones">
+            <button onclick="verificarIngreso()">Entrar</button>
+            <button onclick="reiniciarPatron()">Reiniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+    
+  
+
+  <script src="patron.js"></script>
+  <script>
+  function buscar() {
+    const texto = document.getElementById("busqueda").value.toLowerCase();
+    const tarjetas = document.querySelectorAll(".tarjeta");
+
+    let huboCoincidencia = false;
+
+    tarjetas.forEach(tarjeta => {
+      const contenido = tarjeta.textContent.toLowerCase();
+      const visible = contenido.includes(texto);
+      tarjeta.style.display = visible ? "block" : "none";
+      if (visible) huboCoincidencia = true;
+    });
+
+    // Mostrar todas las secciones si hay texto en el buscador
+    document.querySelectorAll(".tarjetas-box").forEach(seccion => {
+      seccion.style.display = texto.trim() !== "" ? "block" : "";
+    });
+  }
+</script>
+</body>
+</html>

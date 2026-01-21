@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vacantes Laborales</title>
-  <link rel="stylesheet" href="vacantes.css" />
+  <title>Vacantes de Empresas - Jagua Visión 360</title>
+  <link rel="stylesheet" href="servicio.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -12,6 +12,35 @@
       background-color: #f8f9fa;
       margin: 0;
       padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .buscar-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .buscar-container input {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    .volver-btn {
+      padding: 8px 15px;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     h2 {
@@ -40,6 +69,7 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
+      cursor: pointer;
     }
 
     .tarjeta:hover {
@@ -50,6 +80,7 @@
       width: 64px;
       height: 64px;
       margin-bottom: 10px;
+      filter: grayscale(100%);
     }
 
     .tarjeta h3 {
@@ -66,33 +97,82 @@
   </style>
 </head>
 <body>
+  <header>
+    <button class="volver-btn" onclick="window.location.href='index.html'">Volver a la Página Principal</button>
+    <div class="buscar-container">
+      <input type="text" placeholder="Buscar servicios...">
+    </div>
+  </header>
 
-  <h2>Vacantes Disponibles</h2>
-  <p class="intro">Explora las oportunidades laborales disponibles en diferentes sectores.</p>
+  <h2>Vacantes de Empresas en La Jagua de Ibirico</h2>
+  <p class="intro">Explora las principales categorías empresariales activas en la región.</p>
 
   <div class="tarjetas-container">
-
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Comercio" /><h3>Vacantes en Comercio y Ventas</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Gastronomía" /><h3>Vacantes en Gastronomía</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Salud" /><h3>Vacantes en Salud y Bienestar</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2683/2683526.png" alt="Educación" /><h3>Vacantes en Educación</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/860/860814.png" alt="Transporte" /><h3>Vacantes en Transporte</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Servicios Técnicos" /><h3>Vacantes Técnicas y Profesionales</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077081.png" alt="Entretenimiento" /><h3>Vacantes en Cultura y Medios</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3448/3448573.png" alt="Turismo" /><h3>Vacantes en Turismo y Hotelería</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Financieros" /><h3>Vacantes Financieras y Jurídicas</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Medio Ambiente" /><h3>Vacantes en Medio Ambiente</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2937/2937309.png" alt="Agroindustria" /><h3>Vacantes Agroindustriales</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Construcción" /><h3>Vacantes en Construcción</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3855/3855675.png" alt="Belleza" /><h3>Vacantes en Belleza</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Mantenimiento" /><h3>Vacantes de Mantenimiento</h3></div>
-    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3063/3063828.png" alt="Energía" /><h3>Vacantes en Energía</h3></div>
-
+    <div class="tarjeta" onclick="window.location.href='mineria.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/2203/2203188.png" alt="Minería" />
+      <h3>Minería y Energía</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='agroindustria.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/1149/1149168.png" alt="Agro" />
+      <h3>Agroindustria y Agropecuaria</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='comercio.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/1086/1086741.png" alt="Comercio" />
+      <h3>Comercio Local y Ventas</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='educacion.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/1175/1175600.png" alt="Educación" />
+      <h3>Instituciones Educativas</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='salud.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/2674/2674302.png" alt="Salud" />
+      <h3>Servicios de Salud</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='construccion.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/889/889648.png" alt="Construcción" />
+      <h3>Construcción y Obra Civil</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='transporte.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/3349/3349554.png" alt="Transporte" />
+      <h3>Transporte y Logística</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='tecnicos.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Servicios Técnicos" />
+      <h3>Servicios Técnicos y Profesionales</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='gastronomia.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075894.png" alt="Gastronomía" />
+      <h3>Gastronomía y Restauración</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='turismo.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/2058/2058144.png" alt="Turismo" />
+      <h3>Turismo y Hospedaje</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='entretenimiento.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/2541/2541991.png" alt="Entretenimiento" />
+      <h3>Entretenimiento y Cultura</h3>
+    </div>
+    <div class="tarjeta" onclick="window.location.href='belleza.html'">
+      <img src="https://cdn-icons-png.flaticon.com/512/3063/3063828.png" alt="Belleza" />
+      <h3>Belleza y Estética</h3>
+    </div>
   </div>
 
   <footer>
     <p>&copy; 2025 Jagua Visión 360. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    const input = document.querySelector('.buscar-container input');
+    const tarjetas = document.querySelectorAll('.tarjeta');
+
+    input.addEventListener('input', () => {
+      const filtro = input.value.toLowerCase();
+      tarjetas.forEach(tarjeta => {
+        const texto = tarjeta.querySelector('h3').textContent.toLowerCase();
+        tarjeta.style.display = texto.includes(filtro) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>

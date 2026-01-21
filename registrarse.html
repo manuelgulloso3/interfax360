@@ -12,6 +12,7 @@
       align-items: center;
       height: 100vh;
     }
+
     .form-container {
       background-color: #fff;
       padding: 30px;
@@ -19,19 +20,49 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       width: 400px;
     }
-    h2 { text-align: center; margin-bottom: 20px; }
-    label { display: block; margin-top: 10px; }
-    input, select {
-      width: 100%; padding: 8px; margin-top: 5px;
-      border-radius: 8px; border: 1px solid #ccc;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
     button {
-      width: 100%; padding: 10px; margin-top: 20px;
-      background-color: #007bff; color: white;
-      border: none; border-radius: 8px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
     }
-    button:hover { background-color: #0056b3; }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .volver-btn {
+      background-color: #ccc;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .volver-btn:hover {
+      background-color: #bbb;
+    }
   </style>
 </head>
 <body>
@@ -59,6 +90,11 @@
 
       <button type="submit">Registrarse</button>
     </form>
+
+    <!-- Botón de Volver -->
+    <a href="index.html" style="text-decoration: none;">
+      <button type="button" class="volver-btn">Volver a la Página Principal</button>
+    </a>
   </div>
 </body>
 </html>
